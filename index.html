@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        #unique {
+            background-color: yellow;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: lightblue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="unique">This is a unique element with ID.</div>
+    <div class="box highlight">This box has a class "highlight".</div>
+    <div class="box">This box has a class "box".</div>
+    <div id="another" class="box">This box has both ID and class "box".</div>
+
+    <script>
+        // Selecting by ID
+        $('#unique').css('border', '2px solid blue');  // Selects the element with id 'unique' and adds a blue border.
+
+        // Selecting by class
+        $('.highlight').css('background-color', 'pink');  // Selects elements with class 'highlight' and changes the background color.
+
+        // Selecting by class (generic box class)
+        $('.box').css('border', '2px solid green');  // Selects all elements with class 'box' and adds a green border.
+
+        // Selecting with CSS selector (e.g., selecting the element with both class 'box' and ID 'another')
+        $('#another.box').css('font-size', '20px');  // Selects the element with id 'another' and class 'box' and changes the font size.
+    </script>
+</body>
+</html>
